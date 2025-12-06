@@ -1,0 +1,165 @@
+/* GenAI Engineering Handbook - Pure CSS Global Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Docusaurus Standard Primary (Default Green/Teal -> Custom Violet/Purple) */
+  --ifm-color-primary: #8b5cf6; /* New Primary: Violet/Indigo */
+  --ifm-color-primary-dark: #7c3aed;
+  --ifm-color-primary-darker: #6d28d9;
+  --ifm-color-primary-darkest: #4c1d95;
+  --ifm-color-primary-light: #a78bfa;
+  --ifm-color-primary-lighter: #c4b5fd;
+  --ifm-color-primary-lightest: #ddd6fe;
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* --- CUSTOM THEME COLORS (Primary focus) --- */
+  
+  /* Primary - Violet/Indigo */
+  --color-primary: #8b5cf6; 
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #7c3aed;
+  --color-primary-rgb: 139, 92, 246;
+
+  /* Accent - Pink/Fuchsia */
+  --color-accent: #ec4899; 
+  --color-accent-light: #f472b6;
+  --color-accent-dark: #db2777;
+
+  /* Neutrals - Dark theme (Deep Indigo/Purple) */
+  --color-bg: #0f0b1a;      /* Very dark indigo background */
+  --color-bg-secondary: #161125; /* Slightly lighter section background */
+  --color-bg-tertiary: #1f1b2d;  /* Lightest dark background for small elements */
+  --color-surface: #1a1529;    /* Card/surface background */
+  --color-border: #332f48;     /* Dark border line */
+  --color-border-light: #524e6a; /* Lighter border line */
+
+  /* Text */
+  --color-text: #f3f4f6;          /* Lighter white */
+  --color-text-secondary: #b3b2c9; /* Muted text for paragraphs */
+  --color-text-muted: #8e8da8;    /* Muted text for subtle labels */
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.15); /* Violet glow */
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* Docusaurus Dark Mode Overrides */
+[data-theme='dark'] {
+  /* Ensure Docusaurus elements use the correct theme colors */
+  --ifm-color-primary: var(--color-primary); 
+  --ifm-color-primary-dark: var(--color-primary-dark);
+  --ifm-color-primary-darker: var(--color-primary-darker);
+  --ifm-color-primary-darkest: var(--color-primary-darkest);
+  --ifm-color-primary-light: var(--color-primary-light);
+  --ifm-color-primary-lighter: var(--color-primary-lighter);
+  
+  --ifm-background-color: var(--color-bg);
+  --ifm-background-surface-color: var(--color-surface);
+  --ifm-heading-color: var(--color-text);
+  --ifm-text-color: var(--color-text);
+  --ifm-footer-background-color: var(--color-bg-secondary);
+  --ifm-toc-border-color: var(--color-border);
+  --ifm-code-background: var(--color-bg-tertiary);
+  
+  --docusaurus-highlighted-code-line-bg: rgba(139, 92, 246, 0.1);
+}
+
+
+/* --- Base Styles --- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --- Utility Classes --- */
+
+/* Standard Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Typography Gradient (Violet to Fuchsia) */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px); 
+  background-size: 60px 60px;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

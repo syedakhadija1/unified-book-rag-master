@@ -1,0 +1,162 @@
+/*
+Theme Variables (Existing)
+  --color-primary: #ff7f50 (Vibrant Orange)
+  --color-primary-light: #ff916a
+  --color-text: #ffffff
+  --color-text-secondary: #a1a1aa
+  --radius-lg: 24px
+*/
+
+/* 🆕 Replaced .cta with .handbookCta */
+.handbookCta {
+  position: relative;
+  /* Thoda zyada padding taake card breathing room le sake */
+  padding: 8rem 1rem; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🟠 Glows with Animation (Pulse Effect) - Glow classes are generic, keeping them as is, or slightly renaming for consistency */
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.glowLeft {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  /* Using Orange primary color for glow */
+  background: radial-gradient(circle, rgba(255, 127, 80, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: pulseGlow 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowRight {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  /* Using Orange primary color for glow */
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: pulseGlow 8s infinite ease-in-out reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ✨ The Glass Card Container - Replaced .container with .handbookContainer */
+.handbookContainer {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  z-index: 1;
+  
+  /* Glassmorphism Logic (Retained) */
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px; 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+}
+
+/* 🆕 Replaced .title with .handbookTitle */
+.handbookTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem); 
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+/* Optional: Agar title mein gradient daalna ho (Retained for visual appeal) */
+.handbookTitle span {
+  background: linear-gradient(to right, #fff, #ffafcc); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🆕 Replaced .description with .handbookDescription */
+.handbookDescription {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary); /* Using variable for consistency */
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* 🆕 Replaced .actions with .handbookActions */
+.handbookActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🔥 Modern Primary Button - Replaced .primaryBtn with .handbookPrimaryBtn */
+.handbookPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: var(--color-primary); /* Orange */
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px rgba(255, 127, 80, 0.4); 
+  border: 2px solid transparent;
+}
+
+.handbookPrimaryBtn:hover {
+  background: #fff; 
+  color: var(--color-primary); 
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 127, 80, 0.6);
+}
+
+/* 🌑 Modern Secondary Button - Replaced .secondaryBtn with .handbookSecondaryBtn */
+.handbookSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px; 
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.handbookSecondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 640px) {
+  /* 🆕 Replaced .actions with .handbookActions */
+  .handbookActions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}

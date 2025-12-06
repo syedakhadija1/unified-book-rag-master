@@ -1,0 +1,134 @@
+/*
+Theme Variables Assumption (Carried over):
+--color-primary: Royal Blue (#4169E1)
+--color-surface: Dark Grey (#2a2a2a)
+--color-border: Darker Grey (#383838)
+--color-text-secondary: Light Grey (#b0b0b0)
+--color-text-muted: Muted Grey (#8a8a8a)
+--transition-base: 0.3s ease;
+*/
+
+/* 🆕 New Font Style for the Handbook Aesthetic */
+.serifFont {
+  /* Example of a serif font stack for an authoritative, handbook look */
+  font-family: "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+}
+
+/* 🆕 Replaced .about with .handbookSection */
+.handbookSection {
+  padding: var(--spacing-4xl) 0;
+  /* Poore section ka background dark hi rakha */
+  background-color: #1a1a1a; 
+}
+
+/* 🆕 Replaced .container with .handbookContainer */
+.handbookContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: grid;
+  gap: var(--spacing-3xl);
+}
+
+/* 🆕 Replaced .label with .handbookLabel */
+.handbookLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  /* Primary color Royal Blue */
+  color: var(--color-primary); 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🆕 Replaced .title with .handbookTitle */
+.handbookTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-lg);
+  /* Title color white */
+  color: white; 
+}
+
+/* 🆕 Replaced .description with .handbookDescription */
+.handbookDescription {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🆕 Replaced .subdesc with .handbookSubdesc */
+.handbookSubdesc {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* 🆕 Replaced .features with .handbookFeatures */
+.handbookFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* 🆕 Replaced .featureCard with .handbookFeatureCard */
+.handbookFeatureCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background: var(--color-surface); /* Dark surface color */
+  border: 1px solid var(--color-border); /* Dark border */
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+/* 🔄 Royal Blue Hover effect retained */
+.handbookFeatureCard:hover {
+  border-color: rgba(65, 105, 225, 0.3); /* #4169E1 (Royal Blue) RGBA */
+  transform: translateY(-2px);
+  background: #333333; 
+}
+
+/* 🆕 Replaced .featureIcon with .handbookFeatureIcon */
+.handbookFeatureIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Royal Blue background */
+  background: rgba(65, 105, 225, 0.1); 
+  /* Royal Blue border */
+  border: 1px solid rgba(65, 105, 225, 0.2); 
+  color: var(--color-primary); /* Icon color Royal Blue */
+  border-radius: var(--radius-md);
+}
+
+/* 🆕 Replaced .featureTitle with .handbookFeatureTitle */
+.handbookFeatureTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  /* Title ko light color diya */
+  color: white; 
+}
+
+/* 🆕 Replaced .featureDesc with .handbookFeatureDesc */
+.handbookFeatureDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  /* 🆕 Replaced .container with .handbookContainer */
+  .handbookContainer {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--spacing-4xl);
+  }
+}

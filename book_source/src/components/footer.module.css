@@ -1,0 +1,174 @@
+/*
+Theme Variables (Assumed):
+--color-primary: A bright accent color (e.g., Violet/Pink primary for icons/accents)
+--color-bg-secondary: A dark background color (e.g., #1f1f1f)
+--color-bg-tertiary: A slightly lighter dark background (e.g., #2a2a2a)
+--color-border: Dark grey line (e.g., #383838)
+--color-text: White/Light color
+--color-text-secondary: Light Grey
+--color-text-muted: Muted Grey
+--spacing-*: Standard spacing variables
+--radius-*: Standard radius variables
+--transition-fast: 0.15s ease
+*/
+
+/* 🆕 Replaced .footer with .handbookFooter */
+.handbookFooter {
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+/* 🆕 Replaced .container with .handbookContainer */
+.handbookContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+/* 🆕 Replaced .top with .handbookTop */
+.handbookTop {
+  display: grid;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* 🆕 Replaced .brand with .handbookBrand */
+.handbookBrand {
+  max-width: 400px;
+}
+
+/* 🆕 Replaced .logo with .handbookLogo */
+.handbookLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🆕 Replaced .logoIcon with .handbookLogoIcon - Violet/Pink Gradient retained */
+.handbookLogoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  /* Gradient: Violet to Pink */
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.handbookLogo span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 🆕 Replaced .brandDesc with .handbookBrandDesc */
+.handbookBrandDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* 🆕 Replaced .links with .handbookLinks */
+.handbookLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* 🆕 Replaced .linkTitle with .handbookLinkTitle */
+.handbookLinkTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 🆕 Replaced .linkGroup with .handbookLinkGroup */
+.handbookLinkGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🆕 Replaced .link with .handbookLink */
+.handbookLink {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+.handbookLink:hover {
+  color: var(--color-text);
+}
+
+/* 🆕 Replaced .social with .handbookSocial */
+.handbookSocial {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* 🆕 Replaced .socialIcon with .handbookSocialIcon */
+.handbookSocialIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.handbookSocialIcon:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* 🆕 Replaced .bottom with .handbookBottom */
+.handbookBottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+/* 🆕 Replaced .copyright with .handbookCopyright */
+.handbookCopyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* 🆕 Replaced .legal with .handbookLegal */
+.handbookLegal {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+/* 🆕 Replaced .legalLink with .handbookLegalLink */
+.handbookLegalLink {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.handbookLegalLink:hover {
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  /* 🆕 Replaced .top with .handbookTop */
+  .handbookTop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* 🆕 Replaced .bottom with .handbookBottom */
+  .handbookBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

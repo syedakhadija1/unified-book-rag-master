@@ -1,0 +1,34 @@
+* {
+  /* Dark Page Background */
+  background-color: #1c1c1c; 
+  /* Default Text Color */
+  color: #f0f0f0; 
+}
+
+.features {
+  display: flex;
+  justify-content: space-around; /* Items ko barabar space dein */
+  align-items: center;
+  padding: 3rem 0;
+  width: 90%;
+  margin: 2rem auto; /* Center the block */
+  background-color: #2a2a2a; /* Thoda halka dark background */
+  border-radius: 15px; /* Gol kinare */
+  /* Thoda sa depth effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 10px #61dafb; 
+}
+
+.featureSvg {
+  height: 180px;
+  width: 180px;
+  background-color: #383838; /* SVG container ka background */
+  padding: 15px;
+  border-radius: 10px;
+  /* Hover effect ke liye smooth transition */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; 
+}
+
+.featureSvg:hover {
+  transform: translateY(-5px) scale(1.05); /* Upar uthega aur thoda bada hoga */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 20px #a4508b; /* Naya shadow color */
+}

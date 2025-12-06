@@ -1,0 +1,200 @@
+/*
+Theme Variables (Assumed to be Dark Theme with Violet/Pink accents):
+--color-primary: Violet (#8b5cf6)
+--color-primary-light: A lighter Violet (e.g., #9a73fa)
+--color-bg: Section background (e.g., #0d0d0d or #1a1a1a)
+--color-surface: Card/surface background (e.g., #1f1f1f or #2a2a2a)
+--color-border: Dark grey line
+--color-border-light: Slightly lighter dark grey
+--color-text: White
+--color-text-secondary: Light Grey
+--spacing-*: Standard spacing variables
+--radius-*: Standard radius variables
+--transition-*: Standard transition variables
+*/
+
+.handbookHero {
+  position: relative;
+  padding: 140px 0 80px;
+  overflow: hidden;
+}
+
+.backgroundPattern {
+  position: absolute;
+  inset: 0;
+  /* Violet pattern retained */
+  background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.glowOrb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  /* Violet Radial Glow retained */
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.handbookContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  text-align: center;
+}
+
+/* --- TEXT AND HEADING STYLING --- */
+
+.handbookBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  /* Violet tint retained */
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-xl);
+}
+
+.handbookBadge svg {
+  color: var(--color-primary);
+}
+
+.handbookBadge span {
+  font-size: 0.9rem; /* Slightly increased badge font size */
+  font-weight: 600; /* Increased font weight */
+  color: var(--color-primary);
+}
+
+.handbookTitle {
+  /* Updated font sizing and weight for impact */
+  font-size: clamp(3rem, 7vw, 5rem); 
+  font-weight: 900; 
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--spacing-lg);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Violet/Pink gradient retained */
+.handbookTextGradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.handbookSubtitle {
+  font-size: 1.15rem; /* Slightly reduced subtitle font size */
+  color: var(--color-text-secondary);
+  max-width: 700px; /* Wider subtitle area */
+  margin: 0 auto var(--spacing-2xl);
+  line-height: 1.6;
+  font-weight: 400; 
+}
+
+/* --- ACTIONS AND BUTTON STYLING --- */
+
+.handbookActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.handbookPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+}
+
+.handbookPrimaryBtn:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.6);
+}
+
+.handbookPrimaryBtn svg:last-child {
+  transition: transform var(--transition-fast);
+}
+
+.handbookPrimaryBtn:hover svg:last-child {
+  transform: translateX(4px);
+}
+
+.handbookSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.handbookSecondaryBtn:hover {
+  background: var(--color-surface);
+  border-color: var(--color-border-light);
+}
+
+/* --- HERO IMAGE STYLING --- */
+
+.handbookHeroImage {
+  position: relative;
+  margin-top: var(--spacing-4xl);
+}
+
+.handbookImageGlow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.handbookImageContainer {
+  position: relative;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.handbookImageContainer img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+.handbookImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-bg) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .handbookActions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

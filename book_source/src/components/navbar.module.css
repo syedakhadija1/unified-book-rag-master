@@ -1,0 +1,151 @@
+/*
+Refactored CSS for 'GenAI Engineering Handbook' Navbar
+using new class names (e.g., .navbar -> .handbookNavbar)
+*/
+
+.handbookNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  /* Retained background and blur for fixed navbar effect */
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.handbookContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.handbookLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Logo icon colors (Violet/Pink Gradient retained) */
+.handbookLogoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  /* Gradient: Violet to Pink */
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.handbookLogoText {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.handbookNavLinks {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.handbookNavLink {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.handbookNavLink:hover {
+  color: var(--color-text);
+}
+
+.handbookNavActions {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.handbookDocLink {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.handbookDocLink:hover {
+  color: var(--color-text);
+}
+
+/* CTA button colors (Violet primary retained) */
+.handbookCtaButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.handbookCtaButton:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.handbookMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-secondary);
+}
+
+.handbookMobileMenu {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  gap: var(--spacing-md);
+}
+
+.handbookMobileLink {
+  padding: var(--spacing-sm) 0;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.handbookMobileCta {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 768px) {
+  .handbookNavLinks {
+    display: flex;
+  }
+
+  .handbookNavActions {
+    display: flex;
+  }
+
+  .handbookMenuButton {
+    display: none;
+  }
+
+  .handbookMobileMenu {
+    display: none;
+  }
+}

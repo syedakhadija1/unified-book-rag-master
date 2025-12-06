@@ -1,0 +1,53 @@
+/*
+Refactored CSS for 'GenAI Engineering Handbook' Stats Section
+using new class names (e.g., .stats -> .handbookStats)
+*/
+
+.handbookStats {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.handbookContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.handbookStatItem {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.handbookValue {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  /* Electric Violet to Fuchsia Gradient retained */
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #8b5cf6; /* Fallback for browsers that don't support clip */
+  margin-bottom: var(--spacing-xs);
+}
+
+.handbookLabel {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .handbookContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .handbookValue {
+    font-size: 2.5rem;
+  }
+}

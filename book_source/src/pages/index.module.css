@@ -1,0 +1,66 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* --- UI THEME CHANGE: CYBERPUNK NEON --- */
+
+/* Removed the universal black background to allow the body's theme background to show */
+/* The heroBanner will be given a slight background and a neon glow border. */
+/* * {
+  background: black;
+} */
+
+/* This custom property is usually defined in your global file, but we'll include 
+   a fallback for the neon color here just in case. */
+   :root {
+    --color-neon-primary: #ff33cc; /* Bright Pink/Magenta */
+    --color-neon-secondary: #00ffff; /* Bright Cyan */
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* New UI: Apply a dark surface color and a neon glow border */
+  background-color: #1a0f2b; /* Dark purple/indigo surface */
+  border: 1px solid var(--color-neon-primary, #ff33cc);
+  box-shadow: 0 0 15px rgba(255, 51, 204, 0.6), 
+              inset 0 0 10px rgba(255, 51, 204, 0.3); /* Neon outer and inner shadow */
+  border-radius: 10px;
+  margin: 20px auto; /* Add some margin for visual separation */
+  max-width: 1000px; /* Constrain width for a 'panel' feel */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: Add a subtle hover effect */
+.heroBanner:hover {
+    box-shadow: 0 0 25px rgba(255, 51, 204, 0.8), 
+                inset 0 0 15px rgba(255, 51, 204, 0.4); 
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+    /* Adjust border/shadow intensity for mobile if desired */
+    box-shadow: 0 0 10px rgba(255, 51, 204, 0.5); 
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add spacing below the buttons section */
+  margin-top: 1.5rem; 
+
+  /* New UI: Add a subtle separator or background to group buttons */
+  padding: 1rem;
+  background-color: rgba(0, 255, 255, 0.05); /* Very light cyan film */
+  border-top: 1px solid var(--color-neon-secondary, #00ffff);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+/* --- END OF UI THEME CHANGE --- */
