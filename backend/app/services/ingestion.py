@@ -33,7 +33,7 @@ async def ingest_book():
 
     # 2. Read Files
     all_chunks = []
-    docs_path = r"C:\Users\Umar Farooq\Desktop\unified-book-rag\book_source\docs"
+    docs_path = r"C:\Users\Syeda Khadija\Desktop\unified-book-rag\book_source\docs"
 
     markdown_files_found = find_markdown_files(docs_path)
     print(f"Ingestion: Step 2 - Found {len(markdown_files_found)} markdown files. Starting chunk processing...")

@@ -7,7 +7,7 @@ SURFACE: agent
 MODEL: claude-sonnet-4-5-20250929
 FEATURE: book-writing
 BRANCH: feat/book-writing-chapter-1
-USER: Umar Farooq
+USER: Syeda Khadija
 COMMAND: "Write **Chapter 3: NVIDIA Isaac Sim**. File: `book_source/docs/03-isaac-sim.md` Source: https://developer.nvidia.com/isaac-sim Task: 1. Explain USD (Universal Scene Description). 2. Explain how to import a URDF robot into Isaac Sim. 3. Explain \"Sim-to-Real\" transfer techniques."
 LABELS: ["book-writing", "chapter-creation", "isaac-sim", "usd", "sim-to-real"]
 LINKS:

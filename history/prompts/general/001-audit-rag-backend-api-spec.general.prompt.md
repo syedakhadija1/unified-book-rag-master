@@ -7,11 +7,11 @@ SURFACE: "agent"
 MODEL: "claude-sonnet-4-5-20250929"
 FEATURE: "none"
 BRANCH: "feat/book-writing-chapter-1"
-USER: "Umar Farooq"
+USER: "Syeda Khadija"
 COMMAND: "Review the Backend Specification for the RAG Backend API, located at `specs/001-rag-backend-api/spec.md`, against architectural requirements, with particular attention to Python-Node.js cookie handling, RAG, Urdu Translation, and Better-Auth usage."
 LABELS: ["audit", "architecture", "RAG", "authentication", "translation"]
 LINKS:
-  SPEC: "C:\Users\Umar Farooq\Desktop\unified-book-rag\specs\001-rag-backend-api\spec.md"
+  SPEC: "C:\Users\Syeda Khadija\Desktop\unified-book-rag\specs\001-rag-backend-api\spec.md"
   TICKET: "null"
   ADR: "null"
   PR: "null"

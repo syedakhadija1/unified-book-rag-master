@@ -259,7 +259,7 @@
 
 ### Critical Files for Implementation
 
--   `C:\Users\Umar Farooq\Desktop\unified-book-rag\app\main.py` - Core FastAPI application, API endpoint definition, and main entry point.
--   `C:\Users\Umar Farooq\Desktop\unified-book-rag\app\services\rag_service.py` - Contains the main RAG logic, including Qdrant interaction, embedding generation, and LLM prompting.
--   `C:\Users\Umar Farooq\Desktop\unified-book-rag\scripts\ingest_book_content.py` - Python script responsible for loading, chunking, embedding, and storing book content in Qdrant.
--   `C:\Users\Umar Farooq\Desktop\unified-book-rag\requirements.txt` - Lists all Python dependencies required for the project (FastAPI, Qdrant client, LangChain, sentence-transformers).
+-   `C:\Users\Syeda Khadija\Desktop\unified-book-rag\app\main.py` - Core FastAPI application, API endpoint definition, and main entry point.
+-   `C:\Users\Syeda Khadija\Desktop\unified-book-rag\app\services\rag_service.py` - Contains the main RAG logic, including Qdrant interaction, embedding generation, and LLM prompting.
+-   `C:\Users\Syeda Khadija\Desktop\unified-book-rag\scripts\ingest_book_content.py` - Python script responsible for loading, chunking, embedding, and storing book content in Qdrant.
+-   `C:\Users\Syeda Khadija\Desktop\unified-book-rag\requirements.txt` - Lists all Python dependencies required for the project (FastAPI, Qdrant client, LangChain, sentence-transformers).

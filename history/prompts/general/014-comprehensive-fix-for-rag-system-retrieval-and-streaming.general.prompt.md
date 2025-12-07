@@ -7,7 +7,7 @@ surface: agent
 model: claude-sonnet-4-5-20250929
 feature: rag-backend-api
 branch: 001-rag-backend-api
-user: Umar Farooq
+user: Syeda Khadija
 command: i have manually fixed my app i am getting this there is an issue with vector db or rag i think thats a reason it cant running I'm sorry, but I wasn't able to retrieve the information from the book at the moment. Please try asking your question again, or specify a more detailed aspect of "ROS 2 Fundamentals & Core Programming" you're interested in. the response on console @agent-rag-engineer see everything and fix it
 labels: ["bugfix", "streaming", "rag-engineer", "openai-agents-sdk", "qdrant"]
 links:

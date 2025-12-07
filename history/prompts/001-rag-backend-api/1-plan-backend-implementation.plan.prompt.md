@@ -16,7 +16,7 @@ links:
   adr: null
   pr: null
 files:
-  - C:\Users\Umar Farooq\.claude\plans\plucky-sprouting-pumpkin.md
+  - C:\Users\Syeda Khadija\.claude\plans\plucky-sprouting-pumpkin.md
 tests:
   - none
 ---
@@ -33,7 +33,7 @@ The plan details the backend implementation for the RAG system, covering Qdrant 
 
 - ✅ Impact: Provided a comprehensive plan for backend RAG implementation.
 - 🧪 Tests: No tests were run in the planning phase.
-- 📁 Files: One plan file created: C:\Users\Umar Farooq\.claude\plans\plucky-sprouting-pumpkin.md
+- 📁 Files: One plan file created: C:\Users\Syeda Khadija\.claude\plans\plucky-sprouting-pumpkin.md
 - 🔁 Next prompts: User review and approval of the plan, followed by implementation based on the detailed steps.
 - 🧠 Reflection: The planning process successfully integrated user requirements with technical considerations, resulting in a detailed and actionable implementation roadmap.
 

@@ -7,7 +7,7 @@ SURFACE: agent
 MODEL: claude-sonnet-4-5-20250929
 FEATURE: book-writing
 BRANCH: feat/book-writing-chapter-1
-USER: Umar Farooq
+USER: Syeda Khadija
 COMMAND: "Write **Chapter 2: ROS 2 Fundamentals**. File: `book_source/docs/02-ros2-basics.md` Source: https://docs.ros.org/en/humble/index.html Task: 1. Explain Nodes, Topics, and Services as per the syllabus. 2. Provide Python code examples for a "Hello World" Node. 3. Explain Launch files."
 LABELS: ["book-writing", "chapter-creation", "ros2", "fundamentals"]
 LINKS:

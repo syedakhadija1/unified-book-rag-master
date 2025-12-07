@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-(unified-book-rag) C:\Users\Umar Farooq\Desktop\unified-book-rag>uvicorn app.main:app --host 0.0.0.0 --port 8000
+(unified-book-rag) C:\Users\Syeda Khadija\Desktop\unified-book-rag>uvicorn app.main:app --host 0.0.0.0 --port 8000
 INFO:     Started server process [7260]
 INFO:     Waiting for application startup.
 Application startup: Running book content ingestion...
