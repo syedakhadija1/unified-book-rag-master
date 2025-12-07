@@ -40,7 +40,7 @@ const handbookFeatures = [
 export function AboutSection() {
   return (
     // Updated class name for theme change (e.g., 'handbook-section' suggests a new look)
-    <section id="about" className={`${styles.handbookSection} ${styles.serifFont}`}>
+    <section className={`${styles.handbookSection} ${styles.serifFont}`}>
       <div className={styles.handbookContainer}>
         <div className={styles.handbookContent}>
           {/* Updated label */}

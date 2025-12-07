@@ -32,13 +32,13 @@ export function Footer() {
               {/* Updated Link Title */}
               <h4 className={styles.handbookLinkTitle}>Handbook Chapters</h4>
               {/* Updated Links to reflect engineering concepts */}
-              <Link href="#architectures" className={styles.handbookLink}>
+              <Link href="/docs/Module 01 Hardware-Lab/1.1-physical-ai-foundations-basics" className={styles.handbookLink}>
                 Core Architectures
               </Link>
-              <Link href="#deployment" className={styles.handbookLink}>
+              <Link href="/docs/Module 01 Hardware-Lab/1.1-physical-ai-foundations-basics" className={styles.handbookLink}>
                 Deployment & MLOps
               </Link>
-              <Link href="#prompts" className={styles.handbookLink}>
+              <Link href="/docs/Module 01 Hardware-Lab/1.1-physical-ai-foundations-basics" className={styles.handbookLink}>
                 Prompt Engineering
               </Link>
             </div>

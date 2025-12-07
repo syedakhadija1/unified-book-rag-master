@@ -36,7 +36,7 @@ const modules = [
 export function ModulesSection() {
   return (
     // Updated class name
-    <section id="modules" className={styles.handbookModules}>
+    <section className={styles.handbookModules}>
       {/* Updated class name */}
       <div className={styles.handbookContainer}>
         {/* Updated class name and content */}
